@@ -21,18 +21,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void start(View v) {
         EditText editText = (EditText) findViewById(R.id.edtTime);
-        // TODO check if it's undefined/null
-        int i = Integer.parseInt(editText.getText().toString());
+        String time = editText.getText().toString();
+        if (time != null && !time.isEmpty()) {
+            int i = Integer.parseInt(time);
 
-        Intent intent = new Intent(this, AlarmReceiver.class);
+            Intent intent = new Intent(this, AlarmReceiver.class);
 
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getApplicationContext(), 0, intent, 0);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getApplicationContext(), 0, intent, 0);
 
-        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-        alarmManager.set(AlarmManager.RTC_WAKEUP,
-                System.currentTimeMillis() + (i * 1000),
-                pendingIntent);
+            AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+            alarmManager.set(AlarmManager.RTC_WAKEUP,
+                    System.currentTimeMillis() + (i * 1000),
+                    pendingIntent);
 
-        Toast.makeText(this, "Alarm set in " + i + " seconds", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Alarm set in " + i + " seconds", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Bro, add a time dough", Toast.LENGTH_SHORT).show();
+        }
     }
 }
