@@ -1,4 +1,4 @@
-package com.cauealmeida.androidservice.alarm;
+package com.cauealmeida.androidservice.broadcastservice;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

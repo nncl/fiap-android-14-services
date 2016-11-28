@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.cauealmeida.androidservice.alarm.AlarmReceiver;
+import com.cauealmeida.androidservice.broadcastservice.AlarmReceiver;
 
 public class MainActivity extends AppCompatActivity {
 
