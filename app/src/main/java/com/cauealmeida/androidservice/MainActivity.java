@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void start(View v) {
         EditText editText = (EditText) findViewById(R.id.edtTime);
+        // TODO check if it's undefined/null
         int i = Integer.parseInt(editText.getText().toString());
 
         Intent intent = new Intent(this, AlarmReceiver.class);
