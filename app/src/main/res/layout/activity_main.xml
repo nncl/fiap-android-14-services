@@ -9,8 +9,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.cauealmeida.androidservice.MainActivity">
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/edtTime"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:hint="Seconds"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/btnStart"
+        android:layout_below="@+id/edtTime"
+        android:onClick="start"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
