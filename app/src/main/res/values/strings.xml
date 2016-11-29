@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AndroidService</string>
     <string name="title_activity_logger">LoggerActivity</string>
+    <string name="title_activity_bound">BoundActivity</string>
 </resources>
