@@ -38,3 +38,7 @@ https://developer.android.com/
 http://www.androidhive.info/
 
 http://wordpad.cc/12mob-ref
+
+## Exercise 5
+
+It's **[here](http://www.truiton.com/2014/11/bound-service-example-android/)**.
